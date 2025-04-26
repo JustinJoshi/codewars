@@ -6,20 +6,22 @@ function highAndLow(numbers){
     let negative = 0
     let answer = 0
     numbers.split('').forEach ( (x) => {
-        if(x > 0 || x < 0){
+        if(x > 0 || x < 0 || x === 0){
             temp.push((+x))
         }else if(x === '-'){
             temp.push((x))
-        }else{
+        }else if(x === ' '){
             temp = temp.join()
-            temp = temp.replace(',', '')
+            temp = temp.replaceAll(',','')
             nums.push(temp)
             temp = []
+        }else{
+            temp.push((+x))
         }
     })
     if(temp.length > 0){
         temp = temp.join()
-        temp = temp.replace(',', '')
+        temp = temp.replaceAll(',', '')
         nums.push(temp)
         temp = []
     }
