@@ -1,4 +1,4 @@
  
 function makeUpperCase(str) {
-  str.toUppercase()
+  return str.toUppercase()
 }
