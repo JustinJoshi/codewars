@@ -1,4 +1,3 @@
- 
 function simpleMultiplication(number) {
     // your code........
   if(number%2 === 0){
